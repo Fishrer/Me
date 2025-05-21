@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Portfolio Nguyễn Văn Phúc</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Pacifico&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body, html {
+      height: 100%;
+      font-family: 'Poppins', sans-serif;
+      color: white;
+      position: relative;
+      z-index: 1;
+      overflow-x: hidden;
+    }
+
+    #particles-js {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(120deg, #fa6a9a, #f188c9);
+      z-index: 0;
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      display: flex;
+      justify-content: center;
+      padding: 15px 0;
+      z-index: 10;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 20px;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #ffe3f2;
+    }
+
+    .content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      padding: 100px 20px 50px;
+    }
+
+    .avatar {
+      border-radius: 50%;
+      width: 180px;
+      height: 180px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease;
+    }
+
+    .avatar:hover {
+      transform: scale(1.08);
+    }
+
+    h1 {
+      font-size: 2.8em;
+      font-family: 'Pacifico', cursive;
+      margin: 20px 0 10px;
+    }
+
+    h2 {
+      font-weight: 400;
+      font-size: 1.3em;
+      margin-bottom: 20px;
+    }
+
+    p {
+      max-width: 500px;
+      margin: 0 auto 30px;
+      font-size: 1em;
+    }
+
+    .social {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .social a {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: rgba(255, 255, 255, 0.15);
+      padding: 10px 20px;
+      border-radius: 50px;
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      transition: all 0.3s ease;
+    }
+
+    .social a:hover {
+      background: rgba(255, 255, 255, 0.3);
+      transform: translateY(-3px);
+    }
+
+    .social img {
+      height: 28px;
+      width: 28px;
+    }
+
+    .extra-img {
+      margin-top: 40px;
+      width: 300px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    }
+
+    #minigame, #minesweeper {
+      margin-top: 50px;
+      padding: 30px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 15px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    #minigame button, #minesweeper button {
+      padding: 10px 20px;
+      font-weight: bold;
+      border: none;
+      border-radius: 8px;
+      background-color: #fff;
+      color: #fa6a9a;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    #minigame button:hover, #minesweeper button:hover {
+      background-color: #ffe3f2;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(5, 40px);
+      gap: 5px;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .cell {
+      width: 40px;
+      height: 40px;
+      background: #fff;
+      color: #fa6a9a;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      border-radius: 6px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div id="particles-js"></div>
+
+  <nav>
+    <a href="#">Trang chủ</a>
+    <a href="#">Về tôi</a>
+    <a href="#">Dự án</a>
+    <a href="#">Liên hệ</a>
+    <a href="#minigame">Giải trí</a>
+  </nav>
+
+  <div class="content">
+    <img src="https://i.pinimg.com/736x/1d/2f/ba/1d2fba4733ef378e9434802d8670f515.jpg" class="avatar" alt="avatar">
+    <h1>Nguyễn Văn Phúc</h1>
+    <h2>Graphic Designer & Web Dev Learner</h2>
+    <p>Xin chào! Mình là một graphic designer đam mê sáng tạo, đang học thêm lập trình web để tự tay xây dựng thế giới ảo của riêng mình ✨</p>
+
+    <div class="social">
+      <a href="https://www.facebook.com/andre.de.lorde.2024/" target="_blank">
+        <img src="https://1.bp.blogspot.com/-S8HTBQqmfcs/XN0ACIRD9PI/AAAAAAAAAlo/FLhccuLdMfIFLhocRjWqsr9cVGdTN_8sgCPcBGAYYCw/s1600/f_logo_RGB-Blue_1024.png">
+        Facebook
+      </a>
+      <a href="https://x.com/PhcNguy68833626" target="_blank">
+        <img src="https://toppng.com/uploads/preview/twitter-x-icon-logo-116902890413xbfexhf8l.webp">
+        X (Twitter)
+      </a>
+    </div>
+
+    <img src="ceb4803d37b9aa4c4e588644b596f9f6.jpg" class="extra-img" alt="Haram hình anime">
+
+    <div id="minigame">
+      <h2>🎮 Mini Game: Đoán số</h2>
+      <p>Máy đã chọn 1 số từ 1 đến 10, bạn thử đoán xem là số mấy nè!</p>
+      <input type="number" id="guess" placeholder="Nhập số từ 1 đến 10">
+      <button onclick="checkGuess()">Đoán!</button>
+      <p id="result"></p>
+    </div>
+
+    <div id="minesweeper">
+      <h2>💣 Game Dò Mìn</h2>
+      <p>Click vào các ô để tìm hết ô trống. Đừng bấm trúng mìn nha!</p>
+      <div class="grid" id="grid"></div>
+    </div>
+  </div>
+
+  <script>
+    const secret = Math.floor(Math.random() * 10) + 1;
+    function checkGuess() {
+      const guess = parseInt(document.getElementById("guess").value);
+      const result = document.getElementById("result");
+      if (guess === secret) {
+        result.innerHTML = "🎉 Trúng rồi! Cậu giỏi ghê á!";
+      } else {
+        result.innerHTML = "Sai rồi, đoán lại đi nhen! 😝";
+      }
+    }
+
+    const gridEl = document.getElementById("grid");
+    const totalCells = 25;
+    const mines = [3, 7, 14];
+    let revealed = [];
+
+    for (let i = 0; i < totalCells; i++) {
+      const cell = document.createElement("div");
+      cell.classList.add("cell");
+      cell.addEventListener("click", () => {
+        if (mines.includes(i)) {
+          cell.innerHTML = "💥";
+          cell.style.background = "red";
+          alert("Boom! Cậu dính mìn rồi 🤯");
+        } else if (!revealed.includes(i)) {
+          cell.innerHTML = "✅";
+          revealed.push(i);
+          if (revealed.length === totalCells - mines.length) {
+            alert("🎉 Cậu đã chiến thắng game dò mìn!");
+          }
+        }
+      });
+      gridEl.appendChild(cell);
+    }
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script>
+    particlesJS("particles-js", {
+      "particles": {
+        "number": { "value": 80, "density": { "enable": true, "value_area": 800 } },
+        "color": { "value": "#ffffff" },
+        "shape": { "type": "circle" },
+        "opacity": { "value": 0.5 },
+        "size": { "value": 3 },
+        "line_linked": { "enable": true, "distance": 150, "color": "#ffffff", "opacity": 0.4, "width": 1 },
+        "move": { "enable": true, "speed": 2 }
+      },
+      "interactivity": {
+        "detect_on": "canvas",
+        "events": {
+          "onhover": { "enable": true, "mode": "repulse" },
+          "onclick": { "enable": true, "mode": "push" },
+          "resize": true
+        },
+        "modes": {
+          "grab": { "distance": 140, "line_linked": { "opacity": 1 } },
+          "bubble": { "distance": 200, "size": 10, "duration": 2, "opacity": 0.8 },
+          "repulse": { "distance": 100 },
+          "push": { "particles_nb": 4 },
+          "remove": { "particles_nb": 2 }
+        }
+      },
+      "retina_detect": true
+    });
+  </script>
+</body>
+</html>
